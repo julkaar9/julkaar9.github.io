@@ -1,0 +1,22 @@
+.mblack {
+  background-color: #17161a !important;
+}
+.mred {
+  background-color: #d90a2c !important;
+}
+.mwhite {
+  background-color: #f4ebef !important;
+}
+
+.mblack-text {
+  color: #17161a !important;
+}
+.mred-text {
+  color: #d90a2c !important;
+}
+.mwhite-text {
+  color: #f4ebef !important;
+}
+.rounded {
+  border-radius: 8px;
+}
