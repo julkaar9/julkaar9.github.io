@@ -19,92 +19,674 @@
       content="Description and updates related to projects of Julkar9"
     />
     <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+
     <link rel="stylesheet" href="css/maincss.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.0.1/chartjs-plugin-annotation.min.js"
+      integrity="sha512-LZEOcU8s74hwWva82MJux7GgFNjfeExXG9yZPQrKz567Od4O2D/6UX3oGoZiRDOdbMtH33NBq7vonH4VOUPA/Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/mainjs.js"></script>
   </head>
 
   <body class="mblack">
-    <nav>
-      <div class="nav-wrapper mblack">
-        <a href="#" class="brand-logo mred-text">Julkar9-beta</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>
+    <div class="body">
+      <nav>
+        <div class="appBar">
+          <a class="logo mred-text" href="#">Julkar9</a>
+          <div class="row">
+            <a href="https://github.com/julkaar9" target="_blank"
+              ><img class="appBar-icon" src="assets/git.svg"
+            /></a>
+            <a href="https://www.linkedin.com/in/julkaar9/" target="_blank"
+              ><img class="linkedin-icon" src="assets/linkedin.svg"
+            /></a>
             <a
-              class="btn waves-effect waves-light mred rounded"
-              href="apps/chatstat/home.html"
-              >chatstat</a
-            >
-          </li>
-          <li><a href="https://ongko.herokuapp.com/">ongko</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <h1 class="mwhite-text">Welcome to my</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12">
-          <h1 class="mred-text">Gitpage</h1>
-        </div>
-      </div>
-    </div>
-    <!--
-    <div class="row">
-      <div class="col s12 m3">
-        <div class="card small">
-          <div class="card-image">
-            <img src="assets/banner.png" />
-            <span class="card-title">Stack Overflow</span>
-            <a class="btn-floating halfway-fab waves-effect waves-light red"
-              ><i class="material-icons">add</i></a
-            >
-          </div>
-          <div class="card-content">
-            <span id="name"> </span>
-            <span id="reputation"> </span>
-            <span class="dot"> </span>
+              href="https://stackoverflow.com/users/8522463/julkar9"
+              target="_blank"
+              ><img class="appBar-icon" src="assets/stackoverflow.svg"
+            /></a>
           </div>
         </div>
+      </nav>
+      <!-- FIRST ROW -->
+      <div class="flex-row">
+        <div class="col s12 l5">
+          <div class="container center">
+            <span style="font-size: 40px"
+              >Welcome To<br />
+              my Git Page
+            </span>
+          </div>
+        </div>
+        <div class="col s12 l2 show-on-desktop">
+          <div class="center">
+            <div class="timeline"></div>
+            <div class="time" style="font-size: 14px">2022</div>
+          </div>
+        </div>
+        <div class="col s12 l5">
+          <div class="container center"></div>
+        </div>
       </div>
-    </div>
--->
-    <script>
-      /*     function api() {
-        return {
-          id: 8522463,
-          gravatarHtml: {},
-          badgeHtml:
-            '<span title="1 gold badge" aria-hidden="true"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span class="v-visible-sr">1 gold badge</span><span title="8 silver badges" aria-hidden="true"><span class="badge2">&#9679;</span><span class="badgecount">8</span></span><span class="v-visible-sr">8 silver badges</span><span title="20 bronze badges" aria-hidden="true"><span class="badge3">&#9679;</span><span class="badgecount">20</span></span><span class="v-visible-sr">20 bronze badges</span>',
-          reputation: "1,116",
-          displayName: "Julkar9",
-          profileUrl: "https://stackoverflow.com/users/8522463/julkar9",
-        };
-      }
+      <!-- MSC QUALIFICATION ROW -->
+      <div class="flex-row">
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class=" ">
+              <p>I Completed My</p>
+              <h1>Post Graduation</h1>
+              <p>Jan, 21 - July, 22</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l2 show-on-desktop">
+          <div class="center">
+            <div class="timeline"></div>
+            <div class="time" style="font-size: 14px">2022</div>
+          </div>
+        </div>
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="column">
+              <div class="row">
+                <h2>Computer Science (Hons)</h2>
+                <div class="size-box50"></div>
+                <p>2017-2022</p>
+              </div>
+              <div class=" ">
+                <canvas id="mscChart" width="300" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      function parseStackAccount() {
-        dict = api();
-        var repSpan = document.getElementById("reputation");
-        repSpan.innerText = dict.reputation;
-        var nameSpan = document.getElementById("name");
-        nameSpan.innerText = dict.displayName;
-      }
-      document.addEventListener("DOMContentLoaded", function () {
-        parseStackAccount();
-      });
-      */
-    </script>
+      <!-- SECOND ROW -->
+      <div class="flex-row">
+        <div class="col s12 l5">
+          <div class="container center column">
+            <div class="row topic-header">
+              <img class="dark-icon" src="assets/stackoverflow.svg" alt="*" />
+              <div style="margin-left: 10px"></div>
+              <h2>
+                <a
+                  class="stack-link"
+                  target="_blank"
+                  href="https://stackoverflow.com/users/8522463/julkar9"
+                  >Stack Overflow
+                </a>
+              </h2>
+            </div>
+            <div class="row">
+              <div class="box stack-green">
+                <div class="column">
+                  <p class="gfg-body1">Total Reputation</p>
+                  <div class="row">
+                    <h2 id="reputation">1280</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="box stack-box">
+                <div class="column">
+                  <p class="stack-box-text">Gold Badges</p>
+                  <div class="row">
+                    <div class="stack-badge gold shine">
+                      <h2 id="gold">1</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box stack-box stack-box-text">
+                <div class="column">
+                  <p class="stack-box-text">Silver Badges</p>
+                  <div class="row">
+                    <div class="stack-badge silver shine">
+                      <h2 id="silver">7</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box stack-box stack-box-text">
+                <div class="column">
+                  <p class="stack-box-text">Bronze Badges</p>
+                  <div class="row">
+                    <div class="stack-badge bronze shine">
+                      <h2 id="bronze">26</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l2 show-on-desktop">
+          <div class="center">
+            <div class="timeline"></div>
+            <div class="time" style="font-size: 14px">2022</div>
+          </div>
+        </div>
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="stack-column">
+              <div class="row">
+                <p>Top Answers</p>
+              </div>
+              <div class="row">
+                <div class="score-box center">
+                  <p class="score-box-text">52</p>
+                </div>
+                <a
+                  class="so-link"
+                  href="https://stackoverflow.com/questions/9755721/how-can-building-a-heap-be-on-time-complexity/54972825#54972825"
+                  target="_blank"
+                >
+                  How can building a heap be O(n) time complexity?</a
+                >
+              </div>
+              <div class="row">
+                <div class="score-box center">
+                  <p class="score-box-text">3</p>
+                </div>
+                <a
+                  class="so-link"
+                  href="https://stackoverflow.com/questions/43160240/how-to-plot-a-k-distance-graph-in-python/59439701#59439701"
+                  target="_blank"
+                  >how to plot a k-distance graph in python</a
+                >
+              </div>
+              <div class="row">
+                <p>Top Questions</p>
+              </div>
+              <div class="row">
+                <div class="score-box center">
+                  <p class="score-box-text">10</p>
+                </div>
+                <a
+                  class="so-link"
+                  href="https://stackoverflow.com/questions/54347339/longest-palindromic-subsequence-dp-solution"
+                  target="_blank"
+                  >Longest Palindromic Subsequence</a
+                >
+              </div>
+              <div class="row">
+                <div class="score-box center">
+                  <p class="score-box-text">2</p>
+                </div>
+                <a
+                  class="so-link"
+                  href="https://stackoverflow.com/questions/64404643/joblib-cannot-load-dumped-joblib-file-from-another-directory"
+                  target="_blank"
+                  >Right align horizontal seaborn barplot</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Third ROW -->
+      <div class="flex-row">
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="column">
+              <div class="row">
+                <h2>Released My First Android App</h2>
+              </div>
+              <img
+                class="chatstat-logo"
+                src="assets/chatstat/text.png"
+                alt="*"
+              />
+              <div class="row">
+                <div class="app-card">
+                  <p style="font-size: 12px">Downloads</p>
+                  <div class="download-badge"><p>800+</p></div>
+                </div>
+
+                <div class="app-card">
+                  <p style="font-size: 12px">Ratings</p>
+                  <div class="rating-badge"><p>4.9</p></div>
+                </div>
+              </div>
+              <div class="center">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.julkar9.chatstat&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+                  target="_blank"
+                  ><img
+                    class="google-play"
+                    alt="Get it on Google Play"
+                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l2 show-on-desktop">
+          <div class="center">
+            <div class="timeline"></div>
+            <div class="time" style="font-size: 14px">2022</div>
+          </div>
+        </div>
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="row">
+              <div class="img-row img-upper ss-ani">
+                <img src="assets/chatstat/img1.jpg" alt="*" />
+              </div>
+              <div class="img-row img-lower">
+                <img src="assets/chatstat/img4.jpg" alt="*" />
+              </div>
+              <div class="img-row img-upper ss-ani">
+                <img src="assets/chatstat/img1.jpg" alt="*" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- THIRD ROW -->
+      <div class="flex-row">
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="column">
+              <h2>Ongko-herokuapp</h2>
+              <p>Django based Website</p>
+              <p>In Progress</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l2 show-on-desktop">
+          <div class="center">
+            <div class="timeline"></div>
+            <div class="time" style="font-size: 14px">2021</div>
+          </div>
+        </div>
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="card">
+              <h1>Trainee at</h1>
+              <p>Data-Core Systems Inc</p>
+              <p>May, 21 - July, 21</p>
+              <p>
+                Performed various data analysis tasks using python and related
+                frameworks.
+              </p>
+              <div class="row badge-wrap">
+                <div class="badge">
+                  <img
+                    class="small-dark-icon"
+                    src="assets/python.svg"
+                    alt="*"
+                  />
+                  <p class="badge-text">python</p>
+                </div>
+                <div class="badge">
+                  <img
+                    class="small-dark-icon"
+                    src="assets/pandas.svg"
+                    alt="*"
+                  />
+                  <p class="badge-text">pandas</p>
+                </div>
+                <div class="badge">
+                  <img class="small-dark-icon" src="assets/numpy.svg" alt="*" />
+                  <p class="badge-text">numpy</p>
+                </div>
+                <div class="badge">
+                  <img
+                    class="small-dark-icon"
+                    src="assets/sklearn.svg"
+                    alt="*"
+                  />
+                  <p class="badge-text">sklearn</p>
+                </div>
+                <div class="badge">
+                  <img class="small-dark-icon" src="assets/keras.svg" alt="*" />
+                  <p class="badge-text">keras</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- THIRD ROW -->
+      <div class="flex-row">
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="card">
+              <h1>Intern at</h1>
+              <p>AILABS</p>
+              <p>May, 20 - July, 20</p>
+              <p>
+                Completed industrial training project on “Production
+                Optimization and Internal Project work” using Python
+              </p>
+              <div class="row badge-wrap">
+                <div class="badge">
+                  <img
+                    class="small-dark-icon"
+                    src="assets/python.svg"
+                    alt="*"
+                  />
+                  <p class="badge-text">python</p>
+                </div>
+                <div class="badge">
+                  <img
+                    class="small-dark-icon"
+                    src="assets/pandas.svg"
+                    alt="*"
+                  />
+                  <p class="badge-text">pandas</p>
+                </div>
+                <div class="badge">
+                  <img class="small-dark-icon" src="assets/numpy.svg" alt="*" />
+                  <p class="badge-text">numpy</p>
+                </div>
+                <div class="badge">
+                  <img
+                    class="small-dark-icon"
+                    src="assets/sklearn.svg"
+                    alt="*"
+                  />
+                  <p class="badge-text">sklearn</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l2 show-on-desktop">
+          <div class="center">
+            <div class="timeline"></div>
+            <div class="time" style="font-size: 14px">2020</div>
+          </div>
+        </div>
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="column">
+              <div class="row">
+                <h2>Bsc. in Computer Science</h2>
+                <div class="size-box50"></div>
+                <p>2017-2020</p>
+              </div>
+              <div class=" ">
+                <canvas id="bscChart" width="300" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-row">
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="column">
+              <div class="row row-center">
+                <img
+                  class="dark-icon code-chef-color"
+                  src="assets/codechef2.svg"
+                  alt="*"
+                />
+                <div style="margin-left: 10px"></div>
+                <h2>
+                  <a
+                    class="  "
+                    target="_blank"
+                    href="https://www.codechef.com/users/julkaar9"
+                    >Codechef</a
+                  >
+                </h2>
+              </div>
+              <div class=" ">
+                <canvas id="myChart" width="430" height="300"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class=" "></div>
+        </div>
+
+        <div class="col s12 l2 show-on-desktop">
+          <div class="center">
+            <div class="timeline"></div>
+            <div class="time" style="font-size: 14px">2019</div>
+          </div>
+        </div>
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="column">
+              <div class="row row-center">
+                <img class="dark-icon" src="assets/gfg-logo.svg" alt="*" />
+                <div style="margin-left: 10px"></div>
+                <h2>
+                  <a
+                    class="gfg-link"
+                    target="_blank"
+                    href="https://auth.geeksforgeeks.org/user/julkar9"
+                    >GFG Handle</a
+                  >
+                </h2>
+              </div>
+              <div class="row">
+                <div class="box gfg-box">
+                  <div class="column">
+                    <p class="gfg-body1">Institute Rank</p>
+                    <div class="row">
+                      <h2>1</h2>
+                      <img class="dark-icon" src="assets/badge.png" alt="*" />
+                    </div>
+                  </div>
+                </div>
+                <div class="box gfg-box">
+                  <div class="column">
+                    <p class="gfg-body1">Overall coding score</p>
+                    <div class="row">
+                      <h2>1975</h2>
+                      <img class="dark-icon" src="assets/bar.svg" alt="*" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="box gfg-box">
+                  <div class="column">
+                    <p class="gfg-body1">Total Problems Solved</p>
+                    <div class="row">
+                      <h2>1078</h2>
+                      <img class="dark-icon" src="assets/tick.svg" alt="*" />
+                    </div>
+                  </div>
+                </div>
+                <div class="box gfg-box">
+                  <div class="column">
+                    <p class="gfg-body1">Articles Published</p>
+                    <div class="row">
+                      <h2>1</h2>
+                      <img
+                        class="dark-icon"
+                        src="assets/article_gfg.svg"
+                        alt="*"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-row">
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="column">
+              <div class="row">
+                <img
+                  class="dark-icon"
+                  src="assets/freelancer-icon.svg"
+                  alt="*"
+                />
+                <h2>
+                  <a
+                    class="freelancer"
+                    target="_blank"
+                    href="https://www.freelancer.in/u/julkar9"
+                    >freelancer Account</a
+                  >
+                </h2>
+              </div>
+              <div class="row">
+                <div class="column col-center freebox-margin">
+                  <p>I did some Freelance</p>
+                  <p>Graphics Designing</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="box freebox-margin">
+                  <div class="column col-center">
+                    <p>Total Projects</p>
+                    <div class="circle">
+                      <div>
+                        <div class="center">
+                          <h2>10</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box freebox-margin">
+                  <div class="column col-center">
+                    <p>Mean Review</p>
+                    <div class="rating">
+                      <div></div>
+                      <div>
+                        <div class="center">
+                          <h2>4.7</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l2 show-on-desktop">
+          <div class="center">
+            <div class="timeline"></div>
+            <div class="time" style="font-size: 14px">2018</div>
+          </div>
+        </div>
+        <div class="col s12 l5">
+          <div class="container">
+            <div class="grid">
+              <div class="grid-item1"></div>
+              <div class="grid-item2"></div>
+              <div class="grid-item3"></div>
+              <div class="grid-item4"></div>
+              <div class="grid-item5"></div>
+              <div class="grid-item6"></div>
+              <div class="grid-item7"></div>
+              <div class="grid-item8"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-row">
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="column">
+              <p>I Started my</p>
+              <p>Programming journey</p>
+              <p>around this time</p>
+              <p>2017 August</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l2 show-on-desktop">
+          <div class="center">
+            <div class="timeline"></div>
+            <div class="time" style="font-size: 14px">2017</div>
+          </div>
+        </div>
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="card">
+              <h1>Pre-Degree (12th)</h1>
+              <p>Siksha Satra, Visva-Bharati</p>
+              <p>90.5%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-row">
+        <div class="col s12 l5">
+          <div class="container center">
+            <div class="card">
+              <h1>10th</h1>
+              <p>Siksha Satra, Visva-Bharati</p>
+              <p>85%</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l2 show-on-desktop">
+          <div class="center">
+            <div class="timeline"></div>
+            <div class="time" style="font-size: 14px">2015</div>
+          </div>
+        </div>
+        <div class="col s12 l5">
+          <div class="container">
+            <span style="font-size: 40px"> </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="column center">
+        <div class="flex-row">
+          <div class="col s12 m4">
+            <div class="column center">
+              <h2>Julkar9</h2>
+              <p>Beta</p>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="column center">
+              <h2>ChatStat</h2>
+              <a
+                class="so-link"
+                href="apps/chatstat/privacy_policy.html"
+                target="_blank"
+                >Privacy Policy</a
+              >
+            </div>
+          </div>
+        </div>
+        <p>© 2022 julkar9 - chatstat All rights reserved</p>
+      </div>
+    </div>
   </body>
+
+  <script>
+    stackApiHandler();
+    codeChefChart();
+    bscChart();
+    mscChart();
+  </script>
 </html>
