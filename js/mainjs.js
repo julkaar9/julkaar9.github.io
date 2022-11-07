@@ -8,7 +8,6 @@ function stackApiHandler() {
   xmlHttp.send(null);
   let json = JSON.parse(xmlHttp.responseText);
 
-  console.log(json);
   let rep = document.getElementById("reputation");
   let gold = document.getElementById("gold");
   let silver = document.getElementById("silver");
@@ -171,7 +170,6 @@ function codeChefChart() {
 
 function marksChart(id, sem, gpa) {
   const ctx = document.getElementById(id).getContext("2d");
-  console.log(id, sem, gpa);
   const averageAnnot = {
     type: "line",
     borderColor: "#2ec4b6",
